@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { styles } from "./styles";
 
 export default function RootLayout() {
   return (
@@ -8,7 +9,7 @@ export default function RootLayout() {
         initialRouteName="(tabs)"
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: "#0F0F0F" },
+          contentStyle: styles.stackContent,
         }}
       >
         <Stack.Screen name="(tabs)" />

@@ -1,26 +1,11 @@
 import { Tabs } from "expo-router";
-import { View } from "react-native";
+import IconWrap from "@/src/shared/ui/IconWrap";
+import { styles } from "./styles";
 import HomeIcon from "@/assets/icons/tabs-nav/Home-1--Streamline-Sharp.svg";
 import PaymentsIcon from "@/assets/icons/tabs-nav/Investing-And-Banking--Streamline-Sharp.svg";
 import HistoryIcon from "@/assets/icons/tabs-nav/Alarm-Clock--Streamline-Sharp.svg";
 import AnalyticsIcon from "@/assets/icons/tabs-nav/Pie-Chart--Streamline-Sharp.svg";
 import ChatsIcon from "@/assets/icons/tabs-nav/Chat-Two-Bubbles-Oval--Streamline-Sharp.svg";
-
-function IconWrap({ children, focused }: { children: React.ReactNode; focused: boolean }) {
-  return (
-    <View
-      style={{
-        width: 26,
-        height: 26,
-        alignItems: "center",
-        justifyContent: "center",
-        // opacity: focused ? 1 : 0.7,
-      }}
-    >
-      {children}
-    </View>
-  );
-}
 
 export default function TabsLayout() {
   return (
@@ -29,10 +14,7 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarActiveTintColor: "#FE5900",
         tabBarInactiveTintColor: "#FFFFFF",
-        tabBarStyle: {
-          backgroundColor: "#0F0F0F",
-          borderTopColor: "#0F0F0F",
-        },
+        tabBarStyle: styles.tabBar,
       }}
     >
       <Tabs.Screen
