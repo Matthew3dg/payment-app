@@ -1,8 +1,8 @@
 # payment-app
 
 (iPhone 15 - iOS 17.2 Simulator screenshots)
-<img width="1179" height="2556" alt="simulator_screenshot_B8405F86-4286-42A7-9530-27B00058CAD8" src="https://github.com/user-attachments/assets/6fecb52a-dcdf-429f-a5bc-946cfd36095a" />
-<img width="1179" height="2556" alt="simulator_screenshot_31E9D8FF-9AC3-4253-9DE0-116E4B148BB7" src="https://github.com/user-attachments/assets/5632d839-e97c-4f95-8f51-ceea1d06ea0c" />
+<img width="50%" height="2556" alt="simulator_screenshot_B8405F86-4286-42A7-9530-27B00058CAD8" src="https://github.com/user-attachments/assets/6fecb52a-dcdf-429f-a5bc-946cfd36095a" />
+<img width="50%" height="2556" alt="simulator_screenshot_31E9D8FF-9AC3-4253-9DE0-116E4B148BB7" src="https://github.com/user-attachments/assets/5632d839-e97c-4f95-8f51-ceea1d06ea0c" />
 
 A mini app built with Expo + React Native (Expo Router) featuring Home / Payments / History / Analytics / Chats tabs and a separate Notifications screen. Uses SVG icons, a custom `metro` config, path aliases, and TypeScript.
 
