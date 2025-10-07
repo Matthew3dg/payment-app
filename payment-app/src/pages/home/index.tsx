@@ -1,9 +1,10 @@
 import { Link } from "expo-router";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import UserAvatar from "@/assets/icons/user-avatar.svg";
 import BackArrow from "@/assets/icons/back-arrow.svg";
 import QrIcon from "@/assets/icons/Qr-Code.svg";
+import Mastercard from "@/assets/icons/Mastercard.svg";
 import { categories, transactionsToday, transactionsYesterday } from "./constants";
 import { styles as staticStyles } from "./styles";
 import Section from "./ui/Section";
@@ -27,7 +28,7 @@ export default function HomeScreen() {
                   <UserAvatar width={20} height={20} />
                 </View>
                 <Text style={styles.profileName}>Charlotte</Text>
-                <BackArrow width={4} height={8} style={styles.profileArrow} />
+                <BackArrow width={6} height={12} style={styles.profileArrow} />
               </TouchableOpacity>
             </Link>
             <View style={styles.qrWrap}>
@@ -51,14 +52,28 @@ export default function HomeScreen() {
 
         <View style={styles.cardsWrap}>
           <View style={styles.cardsRow}>
-            <View style={styles.cardPrimary}>
-              <Text style={styles.cardPrimaryTitle}>$4,098.12</Text>
-              <Text style={styles.cardPrimarySub}>Debit •• 4385</Text>
-            </View>
-            <View style={styles.cardSecondary}>
-              <Text style={styles.cardSecondaryTitle}>$14.71</Text>
-              <Text style={styles.cardSecondarySub}>Virtual •• 9081</Text>
-            </View>
+            <ImageBackground
+              source={require("@/assets/images/Card-bg-1.png")}
+              style={styles.cardPrimary}
+              imageStyle={styles.cardImage}
+            >
+              <Mastercard width={26} height={16} style={styles.cardBrandIcon} />
+              <View style={styles.cardContent}>
+                <Text style={styles.cardPrimaryTitle}>$4,098.12</Text>
+                <Text style={styles.cardPrimarySub}>Debit •• 4385</Text>
+              </View>
+            </ImageBackground>
+            <ImageBackground
+              source={require("@/assets/images/Card-bg-2.png")}
+              style={styles.cardSecondary}
+              imageStyle={styles.cardImage}
+            >
+              <Mastercard width={26} height={16} style={styles.cardBrandIcon} />
+              <View style={styles.cardContent}>
+                <Text style={styles.cardSecondaryTitle}>$14.71</Text>
+                <Text style={styles.cardSecondarySub}>Virtual •• 9081</Text>
+              </View>
+            </ImageBackground>
             <View style={styles.addCard}>
               <Text style={styles.addCardPlus}>+</Text>
             </View>
