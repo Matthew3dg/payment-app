@@ -2,6 +2,7 @@ import { Link } from "expo-router";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import UserAvatar from "@/assets/icons/user-avatar.svg";
+import BackArrow from "@/assets/icons/back-arrow.svg";
 import QrIcon from "@/assets/icons/Qr-Code.svg";
 import { categories, transactionsToday, transactionsYesterday } from "./constants";
 import { styles as staticStyles } from "./styles";
@@ -26,6 +27,7 @@ export default function HomeScreen() {
                   <UserAvatar width={20} height={20} />
                 </View>
                 <Text style={styles.profileName}>Charlotte</Text>
+                <BackArrow width={4} height={8} style={styles.profileArrow} />
               </TouchableOpacity>
             </Link>
             <View style={styles.qrWrap}>

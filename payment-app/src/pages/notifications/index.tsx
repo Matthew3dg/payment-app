@@ -1,6 +1,8 @@
 import { Link } from "expo-router";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
+import BackArrow from "@/assets/icons/back-arrow.svg";
+import CheckIcon from "@/assets/icons/Vector-notifications-header-ico.svg";
 import { styles } from "./styles";
 import { tabs, notifications } from "./constants";
 import Section from "./ui/Section";
@@ -12,12 +14,12 @@ export default function NotificationsScreen() {
       <View style={styles.header}>
         <Link href="/(tabs)" asChild>
           <TouchableOpacity style={styles.backBtn}>
-            <Text style={styles.backArrow}>{"<"}</Text>
+            <BackArrow width={9} height={15} />
           </TouchableOpacity>
         </Link>
         <Text style={styles.headerTitle}>Notifications</Text>
         <View style={styles.headerRight}>
-          <Text style={styles.checkmark}>☑︎</Text>
+          <CheckIcon width={18} height={17} />
         </View>
       </View>
 
